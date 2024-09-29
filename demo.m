@@ -1,7 +1,6 @@
 clear;
 clc;
 addpath('./data');
-addpath('./libsvm-new');
 addpath('./tool');
 warning off;
 for testnum=1
