@@ -1,12 +1,6 @@
 function [Z,P] = CDLSL(Xs,Xt,Ys,Yt,options)
-% Xs ¡ÊR^d*ns  The source domain samples
-% Xd ¡ÊR^d*nt  The target domain samples
-% Ys ¡ÊR^d*ns  The source domain labels
-% Yt ¡ÊR^d*ns  The target domain labels
-% options has 8 parameters:
-% NeighborMode; WeightMode; k; max_iter; dim; alpha; beta; lambda
 % this function only has 4 items:
-% ||P*X-Z||^2F +lambda*||P||^2F +beta/2*trace(Z*Ls*Z')+alpha*||Z-(Y+B¡ÑM)||^2F
+% ||P*X-Z||^2F +lambda*||P||^2F +beta/2*trace(Z*Ls*Z')+alpha*||Z-(Y+BÂ¡Ã‘M)||^2F
 
 % ------------ Initialization  ---------- %
 rand('seed',6666);
@@ -57,7 +51,7 @@ for iter = 1:options.max_iter
     linshi_U(isinf(linshi_U)) = 0;
     linshi_V(isnan(linshi_V)) = 0;
     linshi_V(isinf(linshi_V)) = 0;        
-    P = linshi_U*linshi_V'*St2;   %P=V*U'*St^(-1/2)£¬¶øSt2=St^(-1/2)
+    P = linshi_U*linshi_V'*St2;   %P=V*U'*St^(-1/2)Â£Â¬Â¶Ã¸St2=St^(-1/2)
 
     % -----------------update M ------------------- %
     M = max(B.* (Z-F),0);
@@ -76,7 +70,7 @@ for iter = 1:options.max_iter
 
     % -------------- obj --------------- %
     Item1=norm(P*X-Z,'fro')^2;
-    Item2=options.alpha*norm(Z-(F+B.*M),'fro')^2;    %options.alpha*norm(Z-(Y+B¡ÑM),'fro')^2
+    Item2=options.alpha*norm(Z-(F+B.*M),'fro')^2;    %options.alpha*norm(Z-(Y+BÂ¡Ã‘M),'fro')^2
     Item3=options.lambda*norm(P,'fro')^2; 
     Item4=options.beta*trace(Z*LS*Z');
           
