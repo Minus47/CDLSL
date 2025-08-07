@@ -1,8 +1,8 @@
 # Common Discriminative Latent Space Learning for Cross-Domain Speech Emotion Recognition
-*📌Frame diagram:* <br>
+📌*Frame diagram:* <br>
 <img width="800" alt="image" src="https://github.com/user-attachments/assets/51669a7b-961b-4ad3-b5e4-7a3c5600f24f" /><br>
 
-*🏷If you find this project useful for your research, please cite:*
+🏷*If you find this project useful for your research, please cite:*
 ```
 @article{fu2024common,
   title={Common Discriminative Latent Space Learning for Cross-Domain Speech Emotion Recognition},
@@ -13,4 +13,4 @@
 }
 ```
 
-*📧If you have any questions, please email the author: minus478256@163.com*
+📧*If you have any questions, please email the author: minus478256@163.com*
